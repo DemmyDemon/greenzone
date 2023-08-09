@@ -7,12 +7,10 @@ ZONES = {
         height = 160.0,
         rotation = -20,
     },
-    pier = {
-        label = "Del Perro Pier Green Zone",
+    la_puerta_helipad = {
+        label = "~b~La Puerta Helipad",
         enforce = true,
-        center = vec2(-1829.5, -1214),
-        width = 80.0,
-        height = 85.0,
-        rotation = -40.25,
+        center = vec2(-733.5,-1454.5),
+        radius = 50.0,
     },
 }
