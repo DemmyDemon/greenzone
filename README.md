@@ -62,15 +62,35 @@ ZONES = {
 
 The format is `name = data` where `data` is a table with any of the following:
 
-| key     | example | type | function |
-|---------|---------|------|----------|
-| label   | "Bob's house" | string | What is shown on the bottom of the screen while in the zone. Omit to show nothing.
-| enforce | true | boolean | When true, some minor effort is made to make anyone inside the zone harmless and unharmed.
-| center  | vec2(0,0) | vector2 | **REQUIRED!** Where the center of the zone is located.
-| width   | 18.7 | number | How wide, on the map, you want a rectangle zone to be.
-| height  | 117.6 | number | How tall, on the map, you want a rectangle zone to be.
-| rotation | 45.3 | number | How many degrees you want a rectangle zone to be rotated.
+| key      | example       | type    | function |
+|----------|---------------|---------|----------|
+| label    | "Bob's house" | string  | What is shown on the bottom of the screen while in the zone. Omit to show nothing.
+| enforce  | true          | boolean | When true, some minor effort is made to make anyone inside the zone harmless and unharmed.
+| center   | vec2(0,0)     | vector2 | **REQUIRED!** Where the center of the zone is located.
+| width    | 18.7          | number  | How wide, on the map, you want a rectangle zone to be.
+| height   | 117.6         | number  | How tall, on the map, you want a rectangle zone to be.
+| rotation | 45.3          | number  | How many degrees you want a rectangle zone to be rotated.
+| radius   | 75.0          | number  | How large a radius you want a circle zone to be.
 
+## There are two kinds of zones
 
+Circular zones have a radius.  
+Rectangular zones have a width and a height, with an optional rotation.  
+**If both are given, the circular takes presidence, and the zone becomes circular.**
 
+# TODO
 
+There is still a lot of work to do before this is up the the level of usefulness I need.  
+For example, I need to...
+
+* Export appropriate functions for use by other resources.
+* Make the whole thing more configurable, with blip colors and alpha levels, etc
+* Disable the enforcement loop if no enforcement is requested.
+* Comment the code properly.
+* This documentation probably needs more work.
+
+# Enjoy to the extent possible
+
+This resource is provided AS IS, with no support. I **MIGHT** answer questions about it, but just because you found it on GitHub does not entitle you to my time. Thank you for being considerate.
+
+Please adhere to [the license](LICENSE.md), and if you find it useful, pay it forward by releasing your own little tidbits under a similarly liberal license.
