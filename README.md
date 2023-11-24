@@ -88,11 +88,11 @@ Rectangular zones have a width and a height, with an optional rotation.
 There is still a lot of work to do before this is up the the level of usefulness I need.  
 For example, I need to...
 
-[ ] Export appropriate functions for use by other resources.
-[x] Make the whole thing more configurable, with blip colors and alpha levels, etc
-[ ] Disable the enforcement loop if no enforcement is requested.
-[ ] Comment the code properly.
-[ ] This documentation probably needs more work.
+- Export appropriate functions for use by other resources.
+- Make the whole thing more configurable, with blip colors and alpha levels, etc
+- Disable the enforcement loop if no enforcement is requested.
+- Comment the code properly.
+- This documentation probably needs more work.
 
 # Enjoy to the extent possible
 
