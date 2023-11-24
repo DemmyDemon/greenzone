@@ -12,5 +12,6 @@ ZONES = {
         enforce = true,
         center = vec2(-733.5,-1454.5),
         radius = 50.0,
+        marked = true,
     },
 }

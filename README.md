@@ -56,6 +56,7 @@ ZONES = {
         enforce = true,
         center = vec2(-733.5,-1454.5),
         radius = 50.0,
+        marked = true,
     },
 }
 ```
@@ -71,6 +72,10 @@ The format is `name = data` where `data` is a table with any of the following:
 | height   | 117.6         | number  | How tall, on the map, you want a rectangle zone to be.
 | rotation | 45.3          | number  | How many degrees you want a rectangle zone to be rotated.
 | radius   | 75.0          | number  | How large a radius you want a circle zone to be.
+| marked   | true          | boolean | When true, a separate blip is placed at the center of the zone.
+| sprite   | 280           | number  | The [blip ID](https://docs.fivem.net/docs/game-references/blips/) for the center blip, if enabled.
+| colour   | 2             | number  | The [blip color](https://docs.fivem.net/docs/game-references/blips/#blip-colors) used for the zone on the map, and the center blip, if enabled. **Note the British spelling!**
+| alpha    | 50            | number  | The alpha strength of the zone on the map, between 0 and 255
 
 ## There are two kinds of zones
 
@@ -83,11 +88,11 @@ Rectangular zones have a width and a height, with an optional rotation.
 There is still a lot of work to do before this is up the the level of usefulness I need.  
 For example, I need to...
 
-* Export appropriate functions for use by other resources.
-* Make the whole thing more configurable, with blip colors and alpha levels, etc
-* Disable the enforcement loop if no enforcement is requested.
-* Comment the code properly.
-* This documentation probably needs more work.
+[ ] Export appropriate functions for use by other resources.
+[x] Make the whole thing more configurable, with blip colors and alpha levels, etc
+[ ] Disable the enforcement loop if no enforcement is requested.
+[ ] Comment the code properly.
+[ ] This documentation probably needs more work.
 
 # Enjoy to the extent possible
 

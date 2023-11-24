@@ -26,6 +26,16 @@ local function PrepareEverything()
             end
             RectangleSetup(zoneName)
         end
+        if data.marked then
+            local blip = AddBlipForCoord(data.center.x, data.center.y, 0.0)
+            SetBlipSprite(blip, data.sprite or 280)
+            SetBlipColour(blip, data.colour or 2)
+            SetBlipAsShortRange(blip, true)
+            BeginTextCommandSetBlipName("STRING")
+            AddTextComponentSubstringPlayerName(data.label or "Green Zone")
+            EndTextCommandSetBlipName(blip)
+            data.markBlip = blip
+        end
     end
 end
 
@@ -102,7 +112,7 @@ function SetZoneProtection(enable)
         enable, -- Melee
         enable, -- Steam
         enable, -- [Unknown]
-        enable -- Drowning
+        enable  -- Drowning
     )
 end
 
